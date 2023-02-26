@@ -8,8 +8,8 @@ const assertEqual = function(actual, expected) {
 
 //takes an array and returns the first item in the array - as an element 
 const head = function(arr) {
-  let firstItem = arr.splice(1);
-  return arr
+  let firstItem = arr.shift();
+  return firstItem
 }
 
 console.log(
