@@ -10,7 +10,7 @@ const assertArrayEqual = function(array1, array2) {
   } else {
     console.log("These 2 strings do not match.");
   }
-}
+};
 
 const map = function(array, callback) {
   const results = [];
