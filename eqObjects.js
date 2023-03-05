@@ -20,14 +20,18 @@ const eqObjects = function(object1, object2) {
     return false
   }
   //loop through the keys comparing the values
-  for (let key of obj1Array) {
-    if (!obj2Array.includes(key)) {
-      return false
+  for (let value of obj1Array) {
+    if (Array.isArray(object2)) {
+      if(!eqArrays(object1[value], object2[value])) {
+        return false
+      }
+  } else if (object1[value] !== object2[value]) {
+    return false
   }
 
   return true
   }
-}
+};
 //first round of testing with primitives
 const shirtObject = {
   colour: "red",
@@ -46,8 +50,10 @@ const longSleeveShirtObject = {
 };
 
 console.log(
-  assertEquals(eqObjects(shirtObject, anotherShirtObject), true), '\n',
-  assertEquals(eqObjects(shirtObject, longSleeveShirtObject), false), '\n'
+  assertEquals(eqObjects(shirtObject, anotherShirtObject), true),
+  '\n',
+  assertEquals(eqObjects(shirtObject, longSleeveShirtObject), false),
+  '\n'
 );
 
 //second round of testing with arrays
@@ -67,12 +73,10 @@ const longSleeveMultiColourObject = {
   sleeveLength: "long"
 };
 
-console.log(
-  eqObjects(multiColourShirtObject, anotherMultiColourShirtObject),
-  eqObjects(multiColourShirtObject, longSleeveMultiColourObject),
-)
 //assert equal
 console.log(
   assertEquals(eqObjects(multiColourShirtObject, anotherMultiColourShirtObject), true),
-  assertEquals(eqObjects(multiColourShirtObject, longSleeveMultiColourObject), false)
+  '\n',
+  assertEquals(eqObjects(multiColourShirtObject, longSleeveMultiColourObject), false),
+  '\n'
 );
