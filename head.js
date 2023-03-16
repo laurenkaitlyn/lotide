@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual == expected) {
-    return (`Assertion Passed ✅✅✅: ${actual} === ${expected}`);
-  } else {
-    return (`Assertion Failed 🛑🛑🛑: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //takes an array and returns the first item in the array - as an element 
 const head = function(arr) {
@@ -12,9 +6,4 @@ const head = function(arr) {
   return firstItem
 }
 
-console.log(
-assertEqual(head([5,6,7]), 5),
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello")
-)
-
-console.log(head([1,2,3]));
+module.exports = head;
