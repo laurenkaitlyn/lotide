@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return (`Assertion Passed ✅✅✅: ${actual} === ${expected}`);
-  } else {
-    return (`Assertion Failed 🛑🛑🛑: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const countLetters = function(sentence) {
   let letterCount = {};
@@ -25,4 +19,6 @@ const countLetters = function(sentence) {
 console.log(countLetters("Hello World"));
 //convert to primitive vaues to verify they are the same
 console.log(assertEqual(JSON.stringify(countLetters("Hello World")),JSON.stringify(countLetters("Hello World"))));
+
+module.exports = countLetters;
 

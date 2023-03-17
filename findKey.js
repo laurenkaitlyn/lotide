@@ -25,3 +25,5 @@ const findKey = function(object, callback) {
 }, x => x.stars === 2) // => "noma"
 
 console.log(assertEqual(find, "noma"));
+
+module.exports = findKey;

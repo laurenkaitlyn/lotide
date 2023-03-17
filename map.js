@@ -25,3 +25,4 @@ console.log(results1);
 
 console.log(assertArrayEqual(results1, ['g', 'c', 't', 'm', 't']));
 
+module.exports = map;
