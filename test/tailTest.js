@@ -1,13 +1,13 @@
 const assert = require('chai').assert;
-const tail = require('../tail');
+const _ = require('../index');
 
 describe("#tail", () => {
   it("returns 'Labs' for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
-    assert.equal(tail(["Yo Yo", "Lighthouse", "Labs"]), 'Labs');
+    assert.equal(_.tail(["Yo Yo", "Lighthouse", "Labs"]), 'Labs');
   });
 
   it("returns 'Students' for ['Hello', 'Lighthouse' , 'Students']", () => {
-    assert.equal(tail(["Hello", "Lighthouse", "Students"]), 'Students');
+    assert.equal(_.tail(["Hello", "Lighthouse", "Students"]), 'Students');
   });
 });
 
