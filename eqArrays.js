@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 
 //check if the arrays match by converting to a string
 //returns true or false
