@@ -2,7 +2,6 @@
 const eqArrays = require('./eqArrays');
 
 const eqObjects = function(object1, object2) {
-// first check if one object has more keys than the other
   obj1Array = Object.keys(object1);
   obj2Array = Object.keys(object2);
 
@@ -12,18 +11,18 @@ const eqObjects = function(object1, object2) {
   } else {
    
     for (let key of obj1Array) {
-      if (Array.isArray(object1.key && Array.isArray(object2.key))) {
-        if (!eqArrays(object1.key, object2.key)) {
+      if (Array.isArray(object1[key] && Array.isArray(object2[key]))) {
+        if (!eqArrays(object1[key], object2[key])) {
           return false;
         }
       
-      } else if (typeof object1.key === 'object' && typeof object2.key === 'object') {
-        if(!eqObjects(object1.key, object2.key)) {
-          return false
+      } else if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+        if(!eqObjects(object1[key], object2[key])) {
+          return false;
         }
       } else {
-        if (object1.key !== object2.key) {
-          return false
+        if (object1[key] !== object2[key]) {
+          return false;
         }
       }
     }
