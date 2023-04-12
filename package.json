@@ -2,7 +2,7 @@
   "name": "@laurenkaitlyn/lotide",
   "version": "1.0.2",
   "description": "clone of lodash library - student project",
-  "main": "assertArrayEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
