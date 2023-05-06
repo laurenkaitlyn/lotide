@@ -30,8 +30,7 @@ The following functions are currently implemented:
 * `tail(...)`: accepts an array and returns the last element in an array
 * `middle(...)`: accepts an array returns the middle element (single element array for odd #) (2 elements if even #). return empty array if length is 3 >
 * `countLetters(...)`: accpets a string and returns an object with key values pairs to show the count of each letter in the string.
-* `countOnly(...)`: accepts an array of strings and returns an object that counts everything 
-that was input 
+* `countOnly(...)`: accepts an array of strings and returns an object that counts everything that was input 
 * `eqArrays(...)`: accepts 2 arrays and returns true or false if they equal eachother
 * `eqObjects(...)`: accepts 2 objects and returns true or false if they equal eachother
 * `findKey(...)`: accepts an object and a callback function and returns the first key in that object
